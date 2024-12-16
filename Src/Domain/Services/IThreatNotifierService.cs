@@ -1,6 +1,8 @@
-﻿namespace Src.Domain.Services;
+﻿using Src.Domain.Entities;
 
-public class IThreatNotifierService
+namespace Src.Domain.Services;
+
+public interface IThreatNotifierService
 {
-    
+    void Notify(Alert alert);
 }

@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+        <PackageReference Include="xunit" Version="2.9.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Application\DTOs\" />
+      <Folder Include="Application\Exceptions\" />
+      <Folder Include="Application\UseCases\" />
+      <Folder Include="Domain\Aggregates\" />
+      <Folder Include="Domain\Events\" />
+      <Folder Include="Domain\ValueObjects\" />
+      <Folder Include="Infrastructure\Configuration\" />
+      <Folder Include="Infrastructure\ElasticSearch\" />
+      <Folder Include="Infrastructure\ML\" />
+      <Folder Include="Infrastructure\PacketProcessing\" />
+      <Folder Include="Presentation\Controllers\" />
+      <Folder Include="Presentation\Middlewares\" />
+      <Folder Include="Presentation\ViewModels\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+</Project>

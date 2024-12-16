@@ -1,0 +1,19 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: traffic-api
+  template:
+    metadata:
+      labels:
+        app: traffic-api
+    spec:
+      containers:
+        - name: traffic-api
+          image: traffic_api_service:latest
+          ports:
+            - containerPort: 80

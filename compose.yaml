@@ -1,0 +1,6 @@
+﻿services:
+  src:
+    image: traffic_api_service
+    build:
+      context: .
+      dockerfile: Src/Dockerfile
